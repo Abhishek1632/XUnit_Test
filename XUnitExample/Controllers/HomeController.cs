@@ -6,7 +6,7 @@ namespace XUnitExample.Controllers
     {
         public string Index()
         {
-            return "Hello Abhishek";
+            return "Hello Abhishek, How are you?";
         }
     }
 }

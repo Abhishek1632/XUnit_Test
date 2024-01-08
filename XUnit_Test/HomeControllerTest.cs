@@ -11,7 +11,7 @@ namespace XUnit_Test
 
             // Arrange
             HomeController controller = new HomeController();
-            string expected = "Hello Abhishek";
+            string expected = "Hello Abhishek, How are you?";
 
             // Act 
             string result = controller.Index();
