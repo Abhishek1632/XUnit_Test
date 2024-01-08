@@ -2,11 +2,25 @@
 
 namespace XUnitExample.Controllers
 {
+    [Route("api/controller")]
+    [ApiController]
     public class HomeController : Controller
     {
-        public string Index()
+        [HttpGet("index/{guessedNumber}")]
+        public string Index(int guessedNumber)
         {
-            return "Hello Abhishek, How are you?";
+            if (guessedNumber < 100)
+            {
+                return "Wrong! Try a bigger number.";
+            }
+            else if(guessedNumber >100)
+            {
+                return "Wring! Try a smaller number.";
+            }
+            else
+            {
+                return "You guessed correct number";
+            }
         }
     }
 }
